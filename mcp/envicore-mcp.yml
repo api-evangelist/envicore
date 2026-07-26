@@ -1,0 +1,42 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.envicoreinc.com/llms.txt
+status: published
+notes: >-
+  EnviCore's public website is built on Wix and exposes the Wix Site MCP server.
+  The endpoint responded to a live tools/list JSON-RPC call on 2026-07-19 with
+  the tool set below. No authentication is required to connect; only public site
+  information is exposed. This is a platform-provided (Wix) MCP surface, not a
+  bespoke EnviCore API MCP server.
+server:
+  name: envicore-site
+  transport: http
+  url: https://www.envicoreinc.com/_api/mcp
+  auth: none
+  platform: Wix Site MCP
+  docs: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
+tools:
+  - name: GetBusinessDetails
+    description: Get business and site details such as timezone, email, phone, and address.
+  - name: SearchInSite
+    description: Search the site for information (searchTerm).
+  - name: SearchSiteApiDocs
+    description: Retrieve API documentation for the Wix business solutions installed on the site (searchTerm).
+  - name: GenerateVisitorToken
+    description: Create a new visitor session and obtain a visitor access token; required before CallWixSiteAPI.
+  - name: CallWixSiteAPI
+    description: Call API methods on the site on a visitor's behalf (query data, book, start a purchase).
+  - name: ExecuteWixAPI
+    description: Run JavaScript against the Wix REST API on the site.
+  - name: ReadFullDocsArticle
+    description: Fetch a complete article from the Wix developer documentation portal.
+  - name: ReadFullDocsMethodSchema
+    description: Fetch the full schema for a Wix API method before calling it.
+  - name: BrowseWixRESTDocsMenu
+    description: Browse the Wix REST API documentation menu hierarchy.
+capabilities:
+  - Get business details (contact info, location, hours)
+  - Discover products and services on offer
+  - Book services and make reservations
+  - Start a purchase and be directed to the site to complete checkout
+  - Ask questions and get relevant answers without browsing the site

@@ -1,7 +1,26 @@
 aid: envicore
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/envicore.png
 name: EnviCore
-description: EnviCore is a company surfaced as a portfolio company of techstars and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  EnviCore is a Calgary, Alberta based sustainability and materials-technology
+  company, backed by Techstars, that produces low-carbon supplementary
+  cementitious materials for the mining and construction industries. Its
+  low-temperature process repurposes industrial waste, mine tailings, clays, and
+  pozzolans into valuable cement replacements, reducing CO2 emissions and
+  supporting a circular economy. EnviCore does not publish a developer API, but
+  its public website exposes an agentic surface: a published llms.txt and a live
+  Wix Site MCP endpoint for AI-agent access to public site content.
 url: https://raw.githubusercontent.com/api-evangelist/envicore/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +30,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Sustainability
+- CleanTech
+- Construction Materials
+- Cement
+- Mining
+- Circular Economy
+- Carbon Reduction
+- MCP
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +48,21 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/envicore-domain-security.yml
+- type: MCPServer
+  name: EnviCore Site MCP (Wix)
+  url: mcp/envicore-mcp.yml
+- type: LLMsTxt
+  url: llms/envicore-llms.txt
+- type: WellKnown
+  url: well-known/envicore-well-known.yml
 - type: Website
   url: https://envicoreinc.com/
+- type: PrivacyPolicy
+  url: https://www.envicoreinc.com/privacy-policy
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

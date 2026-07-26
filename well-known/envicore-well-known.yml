@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+host: https://www.envicoreinc.com
+notes: >-
+  Wix-hosted site. All /.well-known/* discovery paths return HTTP 400 (Wix does
+  not serve a well-known discovery surface). No security.txt, OIDC, OAuth
+  authorization-server, api-catalog, or ai-plugin document is published. The
+  site's agentic surface is instead advertised via /llms.txt and the Wix Site
+  MCP endpoint (see mcp/envicore-mcp.yml). Absence recorded as valid data.
+documents:
+  - path: /.well-known/security.txt
+    status: 400
+  - path: /.well-known/openid-configuration
+    status: 400
+  - path: /.well-known/oauth-authorization-server
+    status: 400
+  - path: /.well-known/api-catalog
+    status: 400
+  - path: /.well-known/ai-plugin.json
+    status: 400
+  - path: /.well-known/mcp.json
+    status: 400
+related:
+  - type: LLMsTxt
+    path: /llms.txt
+    status: 200
+  - type: MCPServer
+    path: /_api/mcp
+    status: live
