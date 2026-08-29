@@ -33,6 +33,9 @@ description: >-
   its public website exposes an agentic surface: a published llms.txt and a live
   Wix Site MCP endpoint for AI-agent access to public site content.
 url: https://raw.githubusercontent.com/api-evangelist/envicore/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "EnviCore does not publish a developer API, but its public website exposes an agentic surface: a published llms.txt and a live Wix Site MCP endpoint for AI-agent access to public site content."
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
